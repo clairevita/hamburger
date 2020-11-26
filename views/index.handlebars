@@ -1,4 +1,4 @@
-<h1>Cats!</h1>
+<h1>Burger Establishment</h1>
 
 <h2>Fresh off the grill!</h2>
 
@@ -6,7 +6,7 @@
   {{#each burgers}}
     {{#unless devoured}}
       <li>
-          {{burger_name}}
+          {{burger_name}} <button id="devour" data-id="{{id}}">Eat Burger</button>
       </li>
     {{/unless}}
   {{/each}}
@@ -18,7 +18,7 @@
 
   <div class="form-group">
     <label for="ca">Name your creation!</label>
-    <input type="text" id="ca" name="name">
+    <input type="text" id="ca" class="burger" name="name">
   </div>
-  <button type="submit">Plate your dish!</button>
+  <button id="plate"type="submit">Plate your dish!</button>
 </form>
