@@ -2,15 +2,15 @@ const express = require("express");
 const router = express.Router();
 const burger = require("../models/burger.js");
 
-// router.get("/", function(req, res) {
-//     cat.all(function(data) {
-//       var hbsObject = {
-//         cats: data
-//       };
-//       console.log(hbsObject);
-//       res.render("index", hbsObject);
-//     });
-//   });
+router.get("/", function(req, res) {
+    burger.selectAll(function(data) {
+      const hbObject = {
+        burgers: data
+      };
+      console.log(hbObject);
+      res.render("index", hbObject);
+    });
+  });
 
 //   router.post("/api/cats", function(req, res) {
 //     cat.create(["name", "sleepy"], [req.body.name, req.body.sleepy], function(result) {
