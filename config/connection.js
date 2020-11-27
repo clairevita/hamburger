@@ -6,7 +6,7 @@ require('dotenv').config();
     host: process.env.JAWSDB_HOST,
     port: process.env.JAWSDB_PORT,
     user: process.env.JAWSDB_USER,
-    password: process.env.JAWSDB_PASS,
+    password: process.env.JAWSDB_PASSW,
     database: JAWSDB_DB
   });
 // Make connection.
