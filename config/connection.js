@@ -8,6 +8,11 @@ require('dotenv').config();
     user: process.env.JAWSDB_USER,
     password: process.env.JAWSDB_PASSW,
     database: JAWSDB_DB
+    // host: process.env.DB_HOST,
+    // port: process.env.DB_PORT,
+    // user: process.env.DB_USER,
+    // password: process.env.DB_PASSW,
+    // database: "burgers_db"
   });
 // Make connection.
 connection.connect(function(err) {
