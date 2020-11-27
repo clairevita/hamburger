@@ -9,7 +9,6 @@ require('dotenv').config();
     password: process.env.JAWSDB_PASS,
     database: JAWSDB_DB
   });
-
 // Make connection.
 connection.connect(function(err) {
   if (err) {
