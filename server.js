@@ -1,20 +1,24 @@
-var express = require("express");
+  
+const express = require("express");
 
-var app = express();
+const PORT = process.env.PORT || 8080;
 
-var PORT = process.env.PORT || 8080;
+const app = express();
 
-//Here we are telling the host to use the Express framework.
+app.use(express.static("public"));
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-//Here we are directing the app to reference the public folder in order to format the page appropriately.
-app.use(express.static('public'))
 
-//This is establishing the proper routes for the app to reference. 
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+var exphbs = require("express-handlebars");
 
-//This initiates the server.
-app.listen(PORT, function () {
-    console.log("App listening on PORT: " + PORT);
-}); 
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+var routes = require("./controllers/burgers_controller.js");
+
+app.use(routes);
+
+app.listen(PORT, function() {
+  console.log("Server listening on: http://localhost:" + PORT);
+});
