@@ -13,7 +13,7 @@
       <label for="burgerName" class="label">Name your creation!</label>
       <textarea class="form-control" id="burgerName" rows="2"></textarea>
     </div>
-      <button id="plate" class="devour btn btn-md btn-warning mb-5" type="submit">Plate your dish!</button>
+      <button id="plate" class="btn btn-md btn-warning mb-5" type="submit">Plate your dish!</button>
       </ul>
     </div>
     <div class="col-4">
@@ -23,7 +23,7 @@
             {{#unless devoured}}
               <li>
                 {{burger_name}}
-                  <button class="devour btn btn-md btn-success mb-1" data-id="{{id}}">Serve!</button>
+                  <button id="devour" class="btn btn-md btn-success mb-1" data-id="{{id}}">Serve!</button>
               </li>
             {{/unless}}
           {{/each}}

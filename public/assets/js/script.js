@@ -14,7 +14,7 @@ $(function() {
     });
 });    
 
-$(".plate").on("submit", function(event) {
+$("#plate").on("submit", function(event) {
     event.preventDefault();
 
     const recipe = {
