@@ -13,7 +13,7 @@
         <label for="ca">Name your creation!</label>
         <input type="text" id="ca" class="burger" name="name">
       </div>
-      <button id="plate"type="submit">Plate your dish!</button>
+      <button id="plate" class="devour btn btn-md btn-warning mb-1" type="submit">Plate your dish!</button>
       </ul>
     </div>
 
@@ -25,7 +25,7 @@
             {{#unless devoured}}
               <li>
                 {{burger_name}}
-                  <button class="devour btn btn-sm btn-success mb-1" data-id="{{id}}">Serve!</button>
+                  <button class="devour btn btn-md btn-success mb-1" data-id="{{id}}">Serve!</button>
               </li>
             {{/unless}}
           {{/each}}
