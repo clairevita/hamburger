@@ -6,8 +6,8 @@
 </div>
 <div class="row">
 <div class="col-1"></div>
-    <div class="mx-1 col-3 p-3">
-      <h3 class="text-white text-center bg-warning">Kitchen</h3>
+    <div class="mx-1 col-3">
+      <h3 class="text-white text-center bg-warning p-6">Kitchen</h3>
       <ul>
   <div class="px-3 form-group">
       <label for="burgerName" class="label">Name your creation!</label>
@@ -19,7 +19,7 @@
 
 
     <div class="col-4">
-      <h3 class="text-white text-center bg-success">Counter</h3>
+      <h3 class="text-white text-center bg-success p-6">Counter</h3>
       <ul>
           {{#each burgers}}
             {{#unless devoured}}
@@ -34,7 +34,7 @@
 
 
     <div class="mx-1 col-3">
-      <h3 class="text-white text-center bg-info">Table</h3>
+      <h3 class="text-white text-center bg-info p-6">Table</h3>
       <ul>
           {{#each burgers}}
             {{#if devoured}}
