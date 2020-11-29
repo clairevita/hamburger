@@ -5,8 +5,8 @@
   </div>
 </div>
 <div class="row">
-    <div class="col-4">
-      <h3 class="text-white text-center bg-alert p-3 mb-2 mt-2">Kitchen</h3>
+    <div class="mx-1 col-4">
+      <h3 class="text-white text-center bg-info p-3 mb-2 mt-2">Kitchen</h3>
       <ul>
       <div class="form-group">
         <label for="ca">Name your creation!</label>
@@ -17,7 +17,7 @@
     </div>
 
 
-    <div class="col-4">
+    <div class="mx-1 col-4">
       <h3 class="text-white text-center bg-success p-3 mb-2 mt-2">Counter</h3>
       <ul>
           {{#each burgers}}
@@ -32,14 +32,14 @@
     </div>
 
 
-    <div class="col-4">
+    <div class="mx-1 col-4">
       <h3 class="text-white text-center bg-info p-3 mb-2 mt-2">Table</h3>
       <ul>
           {{#each burgers}}
             {{#if devoured}}
               <li>
                 {{burger_name}}
-                <button class="delete btn btn-sm btn-v mb-1" data-id="{{id}}">x</button>
+                <button class="delete btn btn-sm btn-info mb-1" data-id="{{id}}">x</button>
               </li>
             {{/if}}
           {{/each}}
