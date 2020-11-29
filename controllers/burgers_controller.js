@@ -3,14 +3,13 @@ const router = express.Router();
 const burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
-    burger.selectAll(function(data) {
-      const hbObject = {
-        burgers: data
-      };
-      console.log(hbObject);
-      res.render("index", hbObject);
-    });
+  burger.selectAll(function(data) {
+    const hbObj = {
+      burgers: data
+    };
+    res.render("index", hbObj);
   });
+});
 
   router.post("/api/burgers", function(req, res) {
     burger.createOne(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
