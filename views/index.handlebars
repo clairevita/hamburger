@@ -13,11 +13,9 @@
       <label for="burgerName" class="label">Name your creation!</label>
       <textarea class="form-control" id="burgerName" rows="2"></textarea>
     </div>
-      <button id="plate" class="devour btn btn-md btn-warning mb-1" type="submit">Plate your dish!</button>
+      <button id="plate" class="devour btn btn-md btn-warning mb-6" type="submit">Plate your dish!</button>
       </ul>
     </div>
-
-
     <div class="col-4">
       <h3><span class="w-100 badge badge-success"><br>Counter<br><br></span></h3>
       <ul>
@@ -39,7 +37,6 @@
             {{#if devoured}}
               <li>
                 {{burger_name}}
-                <button class="delete btn btn-sm btn-info mb-1" data-id="{{id}}">x</button>
               </li>
             {{/if}}
           {{/each}}
