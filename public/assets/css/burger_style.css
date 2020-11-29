@@ -24,3 +24,6 @@ li {
     justify-content: center;
   }
   
+  .jumbotron {
+    background-color: #faebd7;
+  }
