@@ -2,15 +2,42 @@
 
 <h2>Fresh off the grill!</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      <li>
-          {{burger_name}} <button id="devour" data-id="{{id}}">Eat Burger</button>
-      </li>
-    {{/unless}}
-  {{/each}}
-</ul>
+<div class="row">
+    <div class="col-6">
+      <h2 class="text-white text-center bg-warning p-3 mb-2 mt-2">On the Table</h2>
+      <ul>
+          {{#each burgers}}
+            {{#unless devoured}}
+              <li>
+                {{burger_name}}
+                  <button class="devour btn btn-sm btn-warning mb-1" data-id="{{id}}">EAT!</button>
+              </li>
+            {{/unless}}
+          {{/each}}
+
+          <li>
+            <p class="text-info"><i>Order more burgers above...</i></p>
+          </li>
+      </ul>
+    </div>
+
+
+    <div class="col-6">
+      <h2 class="text-white text-center bg-secondary p-3 mb-2 mt-2">Eaten</h2>
+      <ul>
+          {{#each burgers}}
+            {{#if devoured}}
+              <li>
+                {{burger_name}}
+                <button class="delete btn btn-sm btn-secondary mb-1" data-id="{{id}}">x</button>
+              </li>
+            {{/if}}
+          {{/each}}
+      </ul>
+    </div>
+  </div>
+
+  <hr>
 
 
 <h2>Prep a New Burger</h2>
