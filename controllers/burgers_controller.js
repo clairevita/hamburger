@@ -13,17 +13,13 @@ router.get("/", function(req, res) {
 
   router.post("/api/burgers", function(req, res) {
     burger.createOne(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
-      console.log(result);
       res.json({ id: result.insertId });
     });
   });
 
   router.put("/api/burgers/:id", function(req, res) {
     let condition = "id = " + req.params.id;
-    console.log(condition);
-    burger.updateOne({
-      devoured: req.body.devoured
-    }, condition, function(result) {
+    burger.updateOne(condition, function(result) {
       if (result.changedRows == 0) {
         return res.status(404).end();
       } else {

@@ -4,11 +4,11 @@ require('dotenv').config();
 let connection;
 connection = mysql.createConnection(process.env.JAWSDB_URL);
   // var connection = mysql.createConnection({
-  //   host: "",
+  //   host: "localhost",
   //   port: 3306,
-  //   user: "",
+  //   user: "root",
   //   password: "",
-  //   database: ""
+  //   database: "burgers_db"
   // });
 // Make connection.
 connection.connect(function(err) {
