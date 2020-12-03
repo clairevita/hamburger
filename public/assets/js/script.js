@@ -1,8 +1,7 @@
 $(document).ready(function () {
-  
   $("#devour").on("click", function (event) {
     var id = $(this).data("id");
-    var eat = { devoured: true };
+    var eat = { devoured: 1 };
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: eat

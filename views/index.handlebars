@@ -5,46 +5,46 @@
   </div>
 </div>
 <div class="row">
-<div class="col-1"></div>
-    <div class="mx-1 col-3">
-      <h3><span class="w-100 badge badge-warning"><br>Kitchen<br><br></span></h3>
-      <ul>
-  <div class="px-3 form-group">
-    <form class="plate">
-      <label for="burgerName" class="label">Name your creation!</label>
-      <textarea class="form-control" id="burgerName" rows="2"></textarea>
-         <button id="plate" class="btn btn-md btn-warning mb-5" type="submit">Plate your dish!</button>
-      </form>
-    </div>
-      </ul>
-    </div>
-    <div class="col-4">
-      <h3><span class="w-100 badge badge-success"><br>Counter<br><br></span></h3>
-      <ul>
-          {{#each burgers}}
-            {{#unless devoured}}
-              <li>
-                {{burger_name}}
-                  <button id="devour" class="btn btn-md btn-success mb-1" data-id="{{id}}">Serve!</button>
-              </li>
-            {{/unless}}
-          {{/each}}
-      </ul>
-    </div>
-
-    <div class="mx-1 col-3">
-      <h3><span class="w-100 badge badge-info"><br>Table<br><br></span></h3>
-      <ul>
-          {{#each burgers}}
-            {{#if devoured}}
-              <li>
-                {{burger_name}}
-              </li>
-            {{/if}}
-          {{/each}}
-      </ul>
-    </div>
-    <div class="col-1"></div>
+  <div class="col-1"></div>
+  <div class="mx-1 col-3">
+    <h3><span class="w-100 badge badge-warning"><br>Kitchen<br><br></span></h3>
+    <ul>
+      <div class="px-3 form-group">
+        <form class="plate">
+          <label for="burgerName" class="label">Name your creation!</label>
+          <textarea class="form-control" id="burgerName" rows="2"></textarea>
+          <button id="plate" class="btn btn-md btn-warning mb-5" type="submit">Plate your dish!</button>
+        </form>
+      </div>
+    </ul>
+  </div>
+  <div class="col-4">
+    <h3><span class="w-100 badge badge-success"><br>Counter<br><br></span></h3>
+    <ul>
+      {{#each burgers}}
+      {{#unless devoured}}
+      <li>
+        {{burger_name}}
+        <button id="devour" class="btn btn-md btn-success mb-1" data-id="{{id}}">Serve!</button>
+      </li>
+      {{/unless}}
+      {{/each}}
+    </ul>
   </div>
 
-  <hr>
+  <div class="mx-1 col-3">
+    <h3><span class="w-100 badge badge-info"><br>Table<br><br></span></h3>
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
+      <li>
+        {{burger_name}}
+      </li>
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-1"></div>
+</div>
+
+<hr>
